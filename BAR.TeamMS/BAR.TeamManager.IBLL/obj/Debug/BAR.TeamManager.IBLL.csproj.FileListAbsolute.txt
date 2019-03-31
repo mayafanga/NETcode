@@ -1,0 +1,16 @@
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\BAR.TeamManager.IBLL.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\BAR.TeamManager.IBLL.pdb
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\BAR.TeamManager.IDAL.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\BAR.TeamManager.Model.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\EntityFramework.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\BAR.TeamManager.IDAL.pdb
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\BAR.TeamManager.IDAL.dll.config
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\BAR.TeamManager.Model.pdb
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\BAR.TeamManager.Model.dll.config
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\EntityFramework.xml
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\obj\Debug\BAR.TeamManager.IBLL.csprojAssemblyReference.cache
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\obj\Debug\BAR.TeamManager.IBLL.csproj.CoreCompileInputs.cache
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\obj\Debug\BAR.TeamManager.IBLL.csproj.CopyComplete
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\obj\Debug\BAR.TeamManager.IBLL.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IBLL\obj\Debug\BAR.TeamManager.IBLL.pdb

@@ -1,0 +1,103 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>搜索</title>
+    <style type="text/css">
+        .search-text2 {
+            display: block;
+            width: 528px;
+            height: 26px;
+            line-height: 26px;
+            float: left;
+            margin: 3px 5px;
+            border: 1px solid gray;
+            outline: none;
+            font-family: 'Microsoft Yahei';
+            font-size: 14px;
+        }
+
+        .search-btn2 {
+            width: 102px;
+            height: 32px;
+            line-height: 32px;
+            cursor: pointer;
+            border: 0px;
+            background-color: #d6000f;
+            font-family: 'Microsoft Yahei';
+            font-size: 16px;
+            color: #f3f3f3;
+        }
+
+        .search-list-con {
+            width: 640px;
+            background-color: #fff;
+            overflow: hidden;
+            margin-top: 0px;
+            padding-bottom: 15px;
+            padding-top: 5px;
+        }
+
+        .search-list {
+            width: 600px;
+            overflow: hidden;
+            margin: 15px 20px 0px 20px;
+        }
+
+            .search-list dt {
+                font-family: 'Microsoft Yahei';
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 7px;
+                font-weight: normal;
+            }
+
+                .search-list dt a {
+                    color: #2981a9;
+                }
+
+                    .search-list dt a em {
+                        font-style: normal;
+                        color: #cc0000;
+                    }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/Search/SearchContent" method="post">
+            <input type="text" id="txt" />
+            <input type="submit" value="搜一搜" id="btnSearch" />
+            <input type="submit" name="btnCreate" value="创建索引库" />
+        </form>
+    </div>
+</body>
+<script src="~/Scripts/jquery.min.js"></script>
+@*<script>
+    $(function () {
+        $('#btnSearch').click(function () {
+            var txt = $('#txt').val();
+            $.ajax({
+                type: "post",
+                url: "/Search/SearchContent",
+                dataType:"json",
+                data: {
+                    txt: txt
+                },
+                success: function (data) {
+                    var json = JSON.stringify(data);
+                    alert(json);
+                    console.log(json);
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+        });
+    });
+</script>*@
+</html>

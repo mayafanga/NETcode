@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+@using BAR.TeamManager.Common
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @*<link href="~/css/pageBarStyle.css" rel="stylesheet" />*@
+    <link href="~/css/pageNavigate.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="pageNavigate"> 
+        @Html.Raw(BAR.TeamManager.Common.PageBarHelper.CreatePageNavigator(5,1,17))
+    </div>
+</body>
+</html>
+   

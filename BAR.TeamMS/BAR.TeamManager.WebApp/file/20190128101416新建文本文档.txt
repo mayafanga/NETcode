@@ -1,0 +1,34 @@
+支付宝
+WCF
+设计模式（我有书）
+测试
+算法 https://blog.csdn.net/hnyjwang/article/details/80791911  算法讲解
+微信小程序
+前台框架
+项目
+
+（复习）
+
+
+
+http://tikuadmin.51beikao.com/adminx/index.html   1182
+
+
+下载文件前台没写，后台页面还没对接，配置文件还没写上传文件大小以及上线时的配置
+
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.WebApp\img
+
+http://localhost:52058/SingleHonor/Index?index=31
+123456789
+0000000000
+
+
+<div class="groupImage" style="display:none;">
+                                    <form id="form" class="ajaxForm" action="/ImproveHonor/UploadHonor" method="POST" enctype="multipart/form-data" autocomplete="off">
+                                        <input type="file" name="honorFile" class="fileBtn">
+                                        <!-- 传输honorId和DownLoad的值 -->
+                                        <input type="text" name="honorId" value="" class="honorIdIpt" style="display: none;">
+                                        <input type="text" name="DownLoad" value="" class="DownLoadIpt" style="display: none;">
+                                        <input type="submit" class="subBtn" value="上传文件">
+                                    </form>
+                                </div>

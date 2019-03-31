@@ -1,0 +1,39 @@
+﻿.pageNavigate{
+    margin-top:20px;
+    padding:0;
+    font-size:14px;
+    line-height:160%;
+    color:#333;
+    text-align:center;
+}
+.pageNavigate .pageLink{
+    margin:0px;
+    padding:8px 16px;
+    border:1px solid #aaa;
+}
+.pageNavigate .prePage{
+    margin-right:8px;
+}
+.pageNavigate .nextPage{
+    margin-left:8px;
+}
+.pageNavigate .currentPage{
+    border:1px solid #ff4400;
+    background-color:#ff4400;
+    color:#fff;
+}
+.pageNavigate a{
+    text-decoration:none;
+    color:#333;
+}
+.pageNavigate a:hover{
+    border-color:#ff4400;
+    color:#ff4400;
+}
+.pageNavigate .pageInfo{
+    font-size:12px;
+    color:#aaa;
+    padding-left:20px;
+}
+
+

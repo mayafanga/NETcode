@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object type="BAR.TeamManager.WebApp.Controllers.SingleHonorController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="honorService" ref="honorService" />
+    <property name="honorparticipantmemberService" ref="honorparticipantmemberService" />
+    <property name="personalinformationService" ref="personalinformationService" />
+    <property name="teamService" ref="teamService" />
+    <property name="userService" ref="userService"></property>
+    <property name="registerloginService" ref="registerloginService"></property>
+  </object>
+  <object type="BAR.TeamManager.WebApp.Controllers.HonorSubmitController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="honorService" ref="honorService" />
+    <property name="teamService" ref="teamService" />
+    <property name="honorparticipantmemberService" ref="honorparticipantmemberService" />
+    <property name="userService" ref="userService"></property>
+    <property name="personalinformationService" ref="personalinformationService" />
+  </object>
+  <object type="BAR.TeamManager.WebApp.Controllers.HonorALLController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="honorService" ref="honorService" />
+    <property name="teamService" ref="teamService" />
+    <property name="honorparticipantmemberService" ref="honorparticipantmemberService" />
+    <property name="personalinformationService" ref="personalinformationService" />
+  </object>
+  <object type="BAR.TeamManager.WebApp.Controllers.BaseIntroduceController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="webmasterService" ref="webmasterService" />
+  </object>
+  <object type="BAR.TeamManager.WebApp.Controllers.PerIntroduceController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="personalinformationService" ref="personalinformationService" />
+    <property name="userService" ref="userService" />
+  </object>
+  <!--个人信息展示控制器的属性-->
+  <object type="BAR.TeamManager.WebApp.Controllers.PersonShowController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="personalinformationService" ref="personalinformationService" />
+    <property name="teamService" ref="teamService" />
+    <property name="honorparticipantmemberService" ref="honorparticipantmemberService"/>
+    <property name="honorService" ref="honorService"/>
+    <property name="userService" ref="userService" />
+    <property name="teamapplicantService" ref="teamapplicantService"/>
+  </object>
+  <!--配置首页控制器的属性-->
+  <object type="BAR.TeamManager.WebApp.Controllers.HomePageController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="webmasterService" ref="webmasterService"/>
+    <property name="teamService" ref="teamService"/>
+    <property name="honorService" ref="honorService"/>
+    <property name="activityService" ref="activityService"/>
+    <property name="registerloginService" ref="registerloginService"></property>
+  </object>
+  <!--配置注册控制器的属性-->
+  <object type="BAR.TeamManager.WebApp.Controllers.RegisterController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="registerloginService" ref="registerloginService"/>
+    <property name="userService" ref="userService"></property>
+  <property name="personalinformationService" ref="personalinformationService" />
+  </object>
+  <!--配置登录控制器的属性-->
+  <object type="BAR.TeamManager.WebApp.Controllers.LoginController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="userService" ref="userService"/>
+    <property name="registerloginService" ref="registerloginService"/>
+  </object>
+  <object type="BAR.TeamManager.WebApp.Controllers.ImproveTeamInforController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="userService" ref="userService"/>
+    <property name="teamService" ref="teamService"/>
+    <property name="teamapplicantService" ref="teamapplicantService"/>
+  </object>
+  <object type="BAR.TeamManager.WebApp.Controllers.ImproveHonorController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="honorService" ref="honorService"/>
+    <property name="honorparticipantmemberService" ref="honorparticipantmemberService" />
+    <property name="userService" ref="userService"/>
+    <property name="teamService" ref="teamService"/>
+    <property name="teamapplicantService" ref="teamapplicantService"/>
+  </object>
+  <!--SerchController-->
+  <object type="BAR.TeamManager.WebApp.Controllers.SearchController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="honorService" ref="honorService" />
+    <property name="teamService" ref="teamService" />
+    <property name="honorparticipantmemberService" ref="honorparticipantmemberService" />
+    <property name="personalinformationService" ref="personalinformationService" />
+  </object>
+  <!--TeamController-->
+  <object type="BAR.TeamManager.WebApp.Controllers.TeamController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="TeamService" ref="teamService"/>
+    <property name="UserService" ref="userService"/>
+  </object>
+  <!--配置后台管理界面中头部的属性-->
+  <object type="BAR.TeamManager.WebApp.Controllers.BackManagePageController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="webmasterService" ref="webmasterService"/>
+  </object>
+  <!--配置后台管理界面中团队的属性-->
+  <object type="BAR.TeamManager.WebApp.Controllers.BackManageTeamController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="teamService" ref="teamService" />
+  </object>
+  <!--配置后台管理界面中荣耀的属性-->
+  <object type="BAR.TeamManager.WebApp.Controllers.BackManageHonorController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="honorService" ref="honorService" />
+    <property name="userService" ref="userService"/>
+    <property name="registerloginService" ref="registerloginService"/>
+    <property name="honorparticipantmemberService" ref="honorparticipantmemberService" />
+    <property name="personalinformationService" ref="personalinformationService" />
+  </object>
+  <!--配置后台管理界面中团队个人信息的属性-->
+  <object type ="BAR.TeamManager.WebApp.Controllers.BackManagePersonController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="userService" ref="userService"/>
+    <property name="teamService" ref="teamService"/>
+    <property name="personalinformationService" ref="personalinformationService" />
+  </object>
+  <!--修改页面的配置-->
+  <object type="BAR.TeamManager.WebApp.Controllers.ModifyController,BAR.TeamManager.WebApp" singleton="false">
+    <property name="userService" ref="userService"/>
+    <property name="personalinformationService" ref="personalinformationService"/>
+  </object>
+  
+    <!--审核页面的配置-->
+  <object type="BAR.TeamManager.WebApp.Controllers.AuditController,BAR.TeamManager.WebApp"  singleton="false">
+    <property name="teamService" ref="teamService"/>
+  <property name="honorService" ref="honorService"/>
+  </object>
+</objects>

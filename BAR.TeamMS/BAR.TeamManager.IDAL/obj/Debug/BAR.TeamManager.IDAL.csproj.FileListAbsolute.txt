@@ -1,0 +1,17 @@
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\BAR.TeamManager.IDAL.dll.config
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\BAR.TeamManager.IDAL.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\BAR.TeamManager.IDAL.pdb
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\BAR.TeamManager.Model.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\EntityFramework.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\BAR.TeamManager.Model.pdb
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\BAR.TeamManager.Model.dll.config
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\EntityFramework.xml
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\obj\Debug\BAR.TeamManager.IDAL.csprojAssemblyReference.cache
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\obj\Debug\BAR.TeamManager.IDAL.csproj.CoreCompileInputs.cache
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\obj\Debug\BAR.TeamManager.IDAL.csproj.CopyComplete
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\obj\Debug\BAR.TeamManager.IDAL.dll
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.IDAL\obj\Debug\BAR.TeamManager.IDAL.pdb

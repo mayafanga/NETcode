@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MSEntities.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="activitieapplication">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dActivitieApplicationTime" Type="datetime" Precision="0" />
+    <Property Name="iApplyNumber" Type="int" />
+    <Property Name="bApplyState" Type="bool" />
+    <Property Name="vcApplicationPerName" Type="varchar" MaxLength="4" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vcActivityName" Type="varchar" MaxLength="16" />
+    <Property Name="vcActivityIntroduce" Type="varchar" MaxLength="2048" />
+    <Property Name="vcActivityTitle" Type="varchar" MaxLength="64" />
+    <Property Name="vcActivitySliderAddress" Type="varchar" MaxLength="2048" />
+    <Property Name="vcThumbnailAddress" Type="varchar" MaxLength="256" />
+    <Property Name="vcParticipants" Type="varchar" MaxLength="64" />
+    <Property Name="vcActivityFileAddress" Type="varchar" MaxLength="256" />
+    <Property Name="dHostTime" Type="datetime" Precision="0" />
+    <Property Name="vcHostAddress" Type="varchar" MaxLength="256" />
+    <Property Name="vcActivityAdvice" Type="varchar" MaxLength="1024" />
+    <Property Name="vcActivityFeel" Type="varchar" MaxLength="1024" />
+    <Property Name="dActivityEndTime" Type="datetime" Precision="0" />
+    <Property Name="bAudit" Type="bool" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="administrator">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iAdminType" Type="int" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="vcAdminName" Type="varchar" MaxLength="32" />
+    <Property Name="vcAdminPositionName" Type="varchar" MaxLength="32" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="audit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bAuditState" Type="bool" />
+    <Property Name="vcTeacherReturn" Type="varchar" MaxLength="1024" />
+    <Property Name="dAuditTime" Type="datetime" Precision="0" />
+    <Property Name="iActivitieApplicationID" Type="int" />
+    <Property Name="iHonorID" Type="int" />
+    <Property Name="iTeamApplicationID" Type="int" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="authority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vcWebAddress" Type="varchar" MaxLength="256" />
+    <Property Name="vcRequestType" Type="varchar" MaxLength="4" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vcCommentConnect" Type="varchar" MaxLength="1024" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="iActivityID" Type="int" />
+    <Property Name="dCommentTime" Type="datetime" Precision="0" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="eventapplicant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="vcApplicantName" Type="varchar" MaxLength="16" />
+    <Property Name="iTeamApplicantID" Type="int" />
+    <Property Name="iActivityID" Type="int" />
+    <Property Name="iActivitieApplicationID" Type="int" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="honor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vcHonorName" Type="varchar" MaxLength="32" />
+    <Property Name="dSubmitTime" Type="datetime" Precision="0" />
+    <Property Name="vcHonorIntroduce" Type="varchar" MaxLength="1024" />
+    <Property Name="vcGuideTeacher" Type="varchar" MaxLength="4" />
+    <Property Name="vcHonorSubmitAddress" Type="varchar" MaxLength="256" />
+    <Property Name="vcHonorSliderAddress" Type="varchar" MaxLength="2048" />
+    <Property Name="vcPreviewAddress" Type="varchar" MaxLength="256" />
+    <Property Name="vcNetConnectAddress" Type="varchar" MaxLength="256" />
+    <Property Name="vcDownLoadAddress" Type="varchar" MaxLength="256" />
+    <Property Name="vcTechnicalType" Type="varchar" MaxLength="64" />
+    <Property Name="bReviewOfWorks" Type="bool" />
+    <Property Name="iTeamID" Type="int" />
+    <Property Name="bDownLoadUnable" Type="bool" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="honorparticipantmember">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iHonorID" Type="int" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="vcHonorAdvice" Type="varchar" MaxLength="1024" />
+    <Property Name="vcHonorFeel" Type="varchar" MaxLength="1024" />
+    <Property Name="vcNonTeamMember" Type="varchar" MaxLength="256" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="participatmembers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iActivityID" Type="int" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="vcNonTeamMember" Type="varchar" MaxLength="256" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="personalinformation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="vcName" Type="varchar" MaxLength="32" />
+    <Property Name="cPhone" Type="char" MaxLength="11" />
+    <Property Name="vcGender" Type="varchar" MaxLength="2" />
+    <Property Name="dBirthday" Type="datetime" Precision="0" />
+    <Property Name="vcWeChat" Type="varchar" MaxLength="32" />
+    <Property Name="vcEmail" Type="varchar" MaxLength="32" />
+    <Property Name="vcQQ" Type="varchar" MaxLength="32" />
+    <Property Name="vcHobby" Type="varchar" MaxLength="256" />
+    <Property Name="vcPersonalIntroduce" Type="varchar" MaxLength="1024" />
+    <Property Name="vcAddress" Type="varchar" MaxLength="256" />
+    <Property Name="vcMajor" Type="varchar" MaxLength="32" />
+    <Property Name="vcGrade" Type="varchar" MaxLength="8" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="players">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="iTeamApplicantID" Type="int" />
+    <Property Name="bPlayerType" Type="bool" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="registerlogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="dApplyTime" Type="datetime" Precision="0" />
+    <Property Name="vcApplyLocation" Type="varchar" MaxLength="256" />
+    <Property Name="iIdentity" Type="int" Nullable="false" />
+    <Property Name="GUID" Type="guid" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="score">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iScore" Type="int" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="iActivityID" Type="int" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="teacher">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bTeacherType" Type="bool" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="iTeamApplicantID" Type="int" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="team">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vcTeamSliderAddress" Type="varchar" MaxLength="2048" />
+    <Property Name="vcTeamName" Type="varchar" MaxLength="16" />
+    <Property Name="vcGuideTeacher" Type="varchar" MaxLength="4" />
+    <Property Name="vcTeamLogoAddress" Type="varchar" MaxLength="64" />
+    <Property Name="vcTeamIntroduce" Type="varchar" MaxLength="256" />
+    <Property Name="dTeamSetupTime" Type="datetime" Precision="0" />
+    <Property Name="vcTeamMain" Type="varchar" MaxLength="128" />
+    <Property Name="bCheckedTeacher" Type="bool" />
+    <Property Name="bCheckedcounselor" Type="bool" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="teamapplicant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iTeamApplicationID" Type="int" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="iTeamID" Type="int" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="teamapplication">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dApplyTime" Type="datetime" Precision="0" />
+    <Property Name="vcTeamType" Type="varchar" MaxLength="8" />
+    <Property Name="vcTeamApplicationLocation" Type="varchar" MaxLength="128" />
+    <Property Name="iApplyNumber" Type="int" />
+    <Property Name="bApplyState" Type="bool" />
+    <Property Name="vcTeamExpectResult" Type="varchar" MaxLength="1024" />
+    <Property Name="vcTeamActivityPlan" Type="varchar" MaxLength="1024" />
+    <Property Name="vcTeamProSituation" Type="varchar" MaxLength="1024" />
+    <Property Name="vcApplicantIntroduce" Type="varchar" MaxLength="1024" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vcUserAccount" Type="varchar" MaxLength="16" />
+    <Property Name="vcPassWord" Type="varchar" MaxLength="128" />
+    <Property Name="vcNickName" Type="varchar" MaxLength="32" />
+    <Property Name="vcProfilePhotoAddress" Type="varchar" MaxLength="1024" />
+    <Property Name="iWeChatID" Type="int" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="userauthority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iUserID" Type="int" />
+    <Property Name="iAuthorityID" Type="int" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityType Name="webmaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vcName" Type="varchar" MaxLength="16" />
+    <Property Name="vcContent" Type="varchar" MaxLength="2048" />
+    <Property Name="IsDel" Type="bool" />
+  </EntityType>
+  <EntityContainer Name="MSEntitiesStoreContainer">
+    <EntitySet Name="activitieapplication" EntityType="Self.activitieapplication" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="activity" EntityType="Self.activity" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="administrator" EntityType="Self.administrator" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="audit" EntityType="Self.audit" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="authority" EntityType="Self.authority" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="comment" EntityType="Self.comment" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="eventapplicant" EntityType="Self.eventapplicant" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="honor" EntityType="Self.honor" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="honorparticipantmember" EntityType="Self.honorparticipantmember" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="participatmembers" EntityType="Self.participatmembers" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="personalinformation" EntityType="Self.personalinformation" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="players" EntityType="Self.players" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="registerlogin" EntityType="Self.registerlogin" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="score" EntityType="Self.score" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="teacher" EntityType="Self.teacher" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="team" EntityType="Self.team" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="teamapplicant" EntityType="Self.teamapplicant" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="teamapplication" EntityType="Self.teamapplication" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="userauthority" EntityType="Self.userauthority" Schema="barteammanagedb" store:Type="Tables" />
+    <EntitySet Name="webmaster" EntityType="Self.webmaster" Schema="barteammanagedb" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

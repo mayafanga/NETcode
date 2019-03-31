@@ -1,0 +1,76 @@
+支付宝
+WCF
+设计模式（我有书）
+测试
+算法 https://blog.csdn.net/hnyjwang/article/details/80791911  算法讲解
+微信小程序
+前台框架
+项目
+
+（复习）
+
+
+
+http://tikuadmin.51beikao.com/adminx/index.html   1182
+
+
+下载文件前台没写，后台页面还没对接，配置文件还没写上传文件大小以及上线时的配置
+
+C:\Users\MYF\Desktop\BAR.TeamMS\BAR.TeamManager.WebApp\img
+
+http://localhost:52058/SingleHonor/Index?index=31
+123456789
+0000000000
+
+
+
+ /// <summary>
+        /// 上传荣耀文件
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult UploadHonor()
+        {
+            int HonorId = Convert.ToInt32(Request["honorId"]);
+            string jsonTxt = "";
+            HttpFileCollection files = System.Web.HttpContext.Current.Request.Files;
+            string getPath = ConfigurationManager.AppSettings["honorFile"];
+            string fileName = Common.UpLoadFile.UpFile(files, getPath);
+            string saveName= ".." + getPath + "/" + Path.GetFileName(fileName);
+            try
+            {
+                if (fileName != null)
+                {
+                    var honorInfo = HonorService.LoadEntities(h => h.ID == HonorId && h.IsDel == false).FirstOrDefault();
+                    honorInfo.vcHonorSubmitAddress = saveName;
+                    if (HonorService.EditEntity(honorInfo))
+                    {
+                        status = "ok";
+                        result = "添加成功";
+                        jsonTxt = "{" + "\"" + "status" + "\"" + ":" + "\"" + status + "\"" + "," + "\"" + "result" + "\"" + ":" + "\"" + result + "\"" + "}";
+                    }
+                    else
+                    {
+                        status = "no";
+                        result = "添加失败";
+                        jsonTxt = "{" + "\"" + "status" + "\"" + ":" + "\"" + status + "\"" + "," + "\"" + "result" + "\"" + ":" + "\"" + result + "\"" + "}";
+                    }
+                }
+                else
+                {
+                    status = "no";
+                    result = "添加失败";
+                    jsonTxt = "{" + "\"" + "status" + "\"" + ":" + "\"" + status + "\"" + "," + "\"" + "result" + "\"" + ":" + "\"" + result + "\"" + "}";
+                }
+            }
+            catch(Exception ex)
+            {
+                status = "no";
+                result = "添加失败";
+                jsonTxt = "{" + "\"" + "status" + "\"" + ":" + "\"" + status + "\"" + "," + "\"" + "result" + "\"" + ":" + "\"" + result + "\"" + "}";
+            }
+          
+            return Content(jsonTxt);
+        }
+
+

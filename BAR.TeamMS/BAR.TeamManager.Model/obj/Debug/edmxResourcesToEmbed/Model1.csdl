@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MSEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="activitieapplication">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dActivitieApplicationTime" Type="DateTime" />
+    <Property Name="iApplyNumber" Type="Int32" />
+    <Property Name="bApplyState" Type="Boolean" />
+    <Property Name="vcApplicationPerName" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vcActivityName" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="vcActivityIntroduce" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="vcActivityTitle" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="vcActivitySliderAddress" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="vcThumbnailAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcParticipants" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="vcActivityFileAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="dHostTime" Type="DateTime" />
+    <Property Name="vcHostAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcActivityAdvice" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="vcActivityFeel" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="dActivityEndTime" Type="DateTime" />
+    <Property Name="bAudit" Type="Boolean" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="administrator">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iAdminType" Type="Int32" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="vcAdminName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="vcAdminPositionName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="audit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bAuditState" Type="Boolean" />
+    <Property Name="vcTeacherReturn" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="dAuditTime" Type="DateTime" />
+    <Property Name="iActivitieApplicationID" Type="Int32" />
+    <Property Name="iHonorID" Type="Int32" />
+    <Property Name="iTeamApplicationID" Type="Int32" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="authority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vcWebAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcRequestType" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vcCommentConnect" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="iActivityID" Type="Int32" />
+    <Property Name="dCommentTime" Type="DateTime" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="eventapplicant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="vcApplicantName" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="iTeamApplicantID" Type="Int32" />
+    <Property Name="iActivityID" Type="Int32" />
+    <Property Name="iActivitieApplicationID" Type="Int32" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="honor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vcHonorName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="dSubmitTime" Type="DateTime" />
+    <Property Name="vcHonorIntroduce" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="vcGuideTeacher" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="vcHonorSubmitAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcHonorSliderAddress" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="vcPreviewAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcNetConnectAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcDownLoadAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcTechnicalType" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="bReviewOfWorks" Type="Boolean" />
+    <Property Name="iTeamID" Type="Int32" />
+    <Property Name="bDownLoadUnable" Type="Boolean" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="honorparticipantmember">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iHonorID" Type="Int32" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="vcHonorAdvice" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="vcHonorFeel" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="vcNonTeamMember" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="participatmembers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iActivityID" Type="Int32" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="vcNonTeamMember" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="personalinformation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="vcName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="cPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="vcGender" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="dBirthday" Type="DateTime" />
+    <Property Name="vcWeChat" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="vcEmail" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="vcQQ" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="vcHobby" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcPersonalIntroduce" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="vcAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="vcMajor" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="vcGrade" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="players">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="iTeamApplicantID" Type="Int32" />
+    <Property Name="bPlayerType" Type="Boolean" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="registerlogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="dApplyTime" Type="DateTime" />
+    <Property Name="vcApplyLocation" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="iIdentity" Type="Int32" Nullable="false" />
+    <Property Name="GUID" Type="Guid" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="score">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iScore" Type="Int32" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="iActivityID" Type="Int32" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="teacher">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bTeacherType" Type="Boolean" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="iTeamApplicantID" Type="Int32" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="team">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vcTeamSliderAddress" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="vcTeamName" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="vcGuideTeacher" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="vcTeamLogoAddress" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="vcTeamIntroduce" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="dTeamSetupTime" Type="DateTime" />
+    <Property Name="vcTeamMain" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="bCheckedTeacher" Type="Boolean" />
+    <Property Name="bCheckedcounselor" Type="Boolean" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="teamapplicant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iTeamApplicationID" Type="Int32" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="iTeamID" Type="Int32" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="teamapplication">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dApplyTime" Type="DateTime" />
+    <Property Name="vcTeamType" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="vcTeamApplicationLocation" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="iApplyNumber" Type="Int32" />
+    <Property Name="bApplyState" Type="Boolean" />
+    <Property Name="vcTeamExpectResult" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="vcTeamActivityPlan" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="vcTeamProSituation" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="vcApplicantIntroduce" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vcUserAccount" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="vcPassWord" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="vcNickName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="vcProfilePhotoAddress" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="iWeChatID" Type="Int32" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="userauthority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iUserID" Type="Int32" />
+    <Property Name="iAuthorityID" Type="Int32" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="webmaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vcName" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="vcContent" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="barteammanagedbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="activitieapplication" EntityType="Self.activitieapplication" />
+    <EntitySet Name="activity" EntityType="Self.activity" />
+    <EntitySet Name="administrator" EntityType="Self.administrator" />
+    <EntitySet Name="audit" EntityType="Self.audit" />
+    <EntitySet Name="authority" EntityType="Self.authority" />
+    <EntitySet Name="comment" EntityType="Self.comment" />
+    <EntitySet Name="eventapplicant" EntityType="Self.eventapplicant" />
+    <EntitySet Name="honor" EntityType="Self.honor" />
+    <EntitySet Name="honorparticipantmember" EntityType="Self.honorparticipantmember" />
+    <EntitySet Name="participatmembers" EntityType="Self.participatmembers" />
+    <EntitySet Name="personalinformation" EntityType="Self.personalinformation" />
+    <EntitySet Name="players" EntityType="Self.players" />
+    <EntitySet Name="registerlogin" EntityType="Self.registerlogin" />
+    <EntitySet Name="score" EntityType="Self.score" />
+    <EntitySet Name="teacher" EntityType="Self.teacher" />
+    <EntitySet Name="team" EntityType="Self.team" />
+    <EntitySet Name="teamapplicant" EntityType="Self.teamapplicant" />
+    <EntitySet Name="teamapplication" EntityType="Self.teamapplication" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <EntitySet Name="userauthority" EntityType="Self.userauthority" />
+    <EntitySet Name="webmaster" EntityType="Self.webmaster" />
+  </EntityContainer>
+</Schema>

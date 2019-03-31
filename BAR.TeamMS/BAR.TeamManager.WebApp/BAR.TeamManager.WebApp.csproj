@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E46BB95-89D0-4080-B34E-0BDB6A8ADE86}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BAR.TeamManager.WebApp</RootNamespace>
+    <AssemblyName>BAR.TeamManager.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.0.0\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\Lib\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.8\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.10.8\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu">
+      <HintPath>..\Lib\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.HighLight">
+      <HintPath>..\Lib\PanGu.HighLight.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.Lucene.Analyzer">
+      <HintPath>..\Lib\PanGu.Lucene.Analyzer.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spring.Core.2.0.1\lib\net45\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spring.Web.2.0.1\lib\net45\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Extensions, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spring.Web.Extensions.2.0.1\lib\net45\Spring.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Mvc5, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spring.Web.Mvc5.2.0.1\lib\net45\Spring.Web.Mvc5.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.6\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuditController.cs" />
+    <Compile Include="Controllers\BackManageHonorController.cs" />
+    <Compile Include="Controllers\BackManagePageController.cs" />
+    <Compile Include="Controllers\BackManagePersonController.cs" />
+    <Compile Include="Controllers\BackManageTeamController.cs" />
+    <Compile Include="Controllers\BaseIntroduceController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomePageController.cs" />
+    <Compile Include="Controllers\HonorALLController.cs" />
+    <Compile Include="Controllers\HonorSubmitController.cs" />
+    <Compile Include="Controllers\ImproveHonorController.cs" />
+    <Compile Include="Controllers\ImproveTeamInforController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ModifyController.cs" />
+    <Compile Include="Controllers\PerIntroduceController.cs" />
+    <Compile Include="Controllers\PersonShowController.cs" />
+    <Compile Include="Controllers\QuitController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\SingleHonorController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IndexManager.cs" />
+    <Compile Include="Models\SearchContent.cs" />
+    <Compile Include="Models\ViewModelContent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\controllers.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\aboutUs.css" />
+    <Content Include="css\baseIntroduction.css" />
+    <Content Include="css\honorCommit.css" />
+    <Content Include="css\improveInformation.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\login&amp;register.css" />
+    <Content Include="css\pageNavigate.css" />
+    <Content Include="css\perInfoImprove.css" />
+    <Content Include="css\perInfoShow.css" />
+    <Content Include="css\teamApplication.css" />
+    <Content Include="css\teamhonor.css" />
+    <Content Include="css\teamInfoSingle.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="img\aboutUs\interface\987.png" />
+    <Content Include="img\aboutUs\interface\back.jpg" />
+    <Content Include="img\aboutUs\interface\backgroundmain.png" />
+    <Content Include="img\aboutUs\interface\back_noise.png" />
+    <Content Include="img\aboutUs\interface\bgnoise.png" />
+    <Content Include="img\aboutUs\interface\bigshine.png" />
+    <Content Include="img\aboutUs\interface\blog_thumb_border.png" />
+    <Content Include="img\aboutUs\interface\loader.gif" />
+    <Content Include="img\aboutUs\interface\main_bg.png" />
+    <Content Include="img\aboutUs\interface\main_bg_trans.png" />
+    <Content Include="img\aboutUs\interface\shine.png" />
+    <Content Include="img\aboutUs\interface\src_grid.png" />
+    <Content Include="img\aboutUs\interface\thumb_border.png" />
+    <Content Include="img\aboutUs\interface\thumb_holder.png" />
+    <Content Include="img\aboutUs\interface\total_grid.png" />
+    <Content Include="img\aboutUs\large\cover.jpg" />
+    <Content Include="img\aboutUs\large\sample1.jpg" />
+    <Content Include="img\aboutUs\large\sample10.jpg" />
+    <Content Include="img\aboutUs\large\sample11.jpg" />
+    <Content Include="img\aboutUs\large\sample12.jpg" />
+    <Content Include="img\aboutUs\large\sample13.jpg" />
+    <Content Include="img\aboutUs\large\sample14.jpg" />
+    <Content Include="img\aboutUs\large\sample15.jpg" />
+    <Content Include="img\aboutUs\large\sample2.jpg" />
+    <Content Include="img\aboutUs\large\sample3.jpg" />
+    <Content Include="img\aboutUs\large\sample4.jpg" />
+    <Content Include="img\aboutUs\large\sample5.jpg" />
+    <Content Include="img\aboutUs\large\sample6.jpg" />
+    <Content Include="img\aboutUs\large\sample7.jpg" />
+    <Content Include="img\aboutUs\large\sample8.jpg" />
+    <Content Include="img\aboutUs\large\sample9.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample1.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample10.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample11.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample12.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample13.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample14.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample15.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample2.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample3.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample4.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample5.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample6.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample7.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample8.jpg" />
+    <Content Include="img\aboutUs\thumbnails\sample9.jpg" />
+    <Content Include="img\baseIntroduction\nav.png" />
+    <Content Include="img\index\infobg.jpg" />
+    <Content Include="img\index\teamLogo.png" />
+    <Content Include="img\login&amp;register\attention.png" />
+    <Content Include="img\login&amp;register\right.png" />
+    <Content Include="img\login&amp;register\warn.png" />
+    <Content Include="img\slider\baseSlider\slider_1.jpg" />
+    <Content Include="img\slider\baseSlider\slider_2.jpg" />
+    <Content Include="img\slider\baseSlider\slider_3.jpg" />
+    <Content Include="img\slider\baseSlider\slider_4.jpg" />
+    <Content Include="img\slider\baseSlider\slider_5.jpg" />
+    <Content Include="img\slider\baseSlider\slider_6.jpg" />
+    <Content Include="img\slider\baseSlider\slider_7.jpg" />
+    <Content Include="img\slider\honorSlider\slider_1.jpg" />
+    <Content Include="img\slider\honorSlider\slider_2.jpg" />
+    <Content Include="img\slider\honorSlider\slider_3.jpg" />
+    <Content Include="img\slider\indexSlider\slider_1.jpg" />
+    <Content Include="img\slider\indexSlider\slider_2.jpg" />
+    <Content Include="img\slider\indexSlider\slider_3.jpg" />
+    <Content Include="img\slider\teamSlider\slider_1.jpg" />
+    <Content Include="img\slider\teamSlider\slider_2.jpg" />
+    <Content Include="img\slider\teamSlider\slider_3.jpg" />
+    <Content Include="js\aboutUs.js\aura_400.font.js" />
+    <Content Include="js\aboutUs.js\cufon-yui.js" />
+    <Content Include="js\aboutUs.js\pngfix.js" />
+    <Content Include="js\baseIntroduction.js" />
+    <Content Include="js\honorCommit.js" />
+    <Content Include="js\improveInformation.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\login&amp;register.js" />
+    <Content Include="js\perInfoImprove.js" />
+    <Content Include="js\teamApplication.js" />
+    <Content Include="lib\animate.css-3.5.0\animate.css" />
+    <Content Include="lib\animate.css-3.5.0\animate.min.css" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap.css" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap-3.3.7\js\bootstrap.js" />
+    <Content Include="lib\bootstrap-3.3.7\js\bootstrap.min.js" />
+    <Content Include="lib\bootstrap-3.3.7\js\npm.js" />
+    <Content Include="lib\cropit.js-0.5.1\jquery.cropit.js" />
+    <Content Include="lib\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="lib\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="lib\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="lib\jQuery Form-3.51.0\jquery.form.js" />
+    <Content Include="lib\jquery-2.1.4\jquery.js" />
+    <Content Include="lib\jquery-2.1.4\jquery.min.js" />
+    <Content Include="lib\My97DatePicker-4.8\calendar.js" />
+    <Content Include="lib\My97DatePicker-4.8\lang\en.js" />
+    <Content Include="lib\My97DatePicker-4.8\lang\zh-cn.js" />
+    <Content Include="lib\My97DatePicker-4.8\lang\zh-tw.js" />
+    <Content Include="lib\My97DatePicker-4.8\skin\datePicker.gif" />
+    <Content Include="lib\My97DatePicker-4.8\skin\default\datepicker.css" />
+    <Content Include="lib\My97DatePicker-4.8\skin\default\img.gif" />
+    <Content Include="lib\My97DatePicker-4.8\skin\WdatePicker.css" />
+    <Content Include="lib\My97DatePicker-4.8\skin\whyGreen\bg.jpg" />
+    <Content Include="lib\My97DatePicker-4.8\skin\whyGreen\datepicker.css" />
+    <Content Include="lib\My97DatePicker-4.8\skin\whyGreen\img.gif" />
+    <Content Include="lib\My97DatePicker-4.8\WdatePicker.js" />
+    <Content Include="lib\slicebox-1.1.0\jquery.slicebox.js" />
+    <Content Include="lib\slicebox-1.1.0\modernizr.custom.46884.js" />
+    <Content Include="lib\slicebox-1.1.0\slicebox.css" />
+    <Content Include="lib\wow-1.1.2\wow.js" />
+    <Content Include="lib\wow-1.1.2\wow.min.js" />
+    <Content Include="public\public-css\css-clear.css" />
+    <Content Include="public\public-footer\footer.css" />
+    <Content Include="public\public-footer\footer.js" />
+    <Content Include="public\public-footer\使用方法.txt" />
+    <Content Include="public\public-header\header.css" />
+    <Content Include="public\public-header\header.js" />
+    <Content Include="public\public-header\使用方法.txt" />
+    <Content Include="public\public-honorModule\honorInformationAll.css" />
+    <Content Include="public\public-honorModule\honorInformationAll.js" />
+    <Content Include="public\public-honorModule\使用说明.txt" />
+    <Content Include="public\public-img\LOGO.jpg" />
+    <Content Include="public\public-img\QR code.png" />
+    <Content Include="public\public-memberModule\memberInformationAll.css" />
+    <Content Include="public\public-memberModule\memberInformationAll.js" />
+    <Content Include="public\public-memberModule\使用说明.txt" />
+    <Content Include="public\public-perHonorModule\perHonorModule.css" />
+    <Content Include="public\public-perHonorModule\perHonorModule.js" />
+    <Content Include="public\public-slider\slider.css" />
+    <Content Include="public\public-slider\slider.js" />
+    <Content Include="public\public-teamModule\teamInformationAll.css" />
+    <Content Include="public\public-teamModule\teamInformationAll.js" />
+    <Content Include="public\public-teamModule\使用说明.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap-theme.min.css.map" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap.min.css.map" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="lib\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\core.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\list.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\path.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="lib\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\SingleHonor\Index.cshtml" />
+    <Content Include="Views\HonorSubmit\Index.cshtml" />
+    <Content Include="Views\HonorALL\Index.cshtml" />
+    <Content Include="Views\BaseIntroduce\Index.cshtml" />
+    <Content Include="Views\PerIntroduce\Index.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\PersonShow\Index.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\HomePage\Index.cshtml" />
+    <Content Include="Views\ImproveTeamInfor\Index.cshtml" />
+    <Content Include="Views\Team\TeamApplyaction.cshtml" />
+    <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\Team\TeamInfoSingle.cshtml" />
+    <Content Include="Views\BackManageTeam\Index.cshtml" />
+    <Content Include="Views\BackManagePage\Index.cshtml" />
+    <Content Include="Views\ImproveHonor\Index.cshtml" />
+    <Content Include="Views\BackManageHonor\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="file\" />
+    <Folder Include="img\logo\activityLogo\" />
+    <Folder Include="img\logo\honorLogo\" />
+    <Folder Include="img\logo\personLogo\" />
+    <Folder Include="img\logo\teamLogo\" />
+    <Folder Include="img\slider\activitySlider\" />
+    <Folder Include="Views\Audit\" />
+    <Folder Include="Views\Modify\" />
+    <Folder Include="Views\Quit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BAR.TeamManager.BLL\BAR.TeamManager.BLL.csproj">
+      <Project>{393765f0-2027-4cbb-9fad-60cf8502fc0f}</Project>
+      <Name>BAR.TeamManager.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BAR.TeamManager.Common\BAR.TeamManager.Common.csproj">
+      <Project>{91a731de-bdd5-499a-a252-4f7afabfe382}</Project>
+      <Name>BAR.TeamManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BAR.TeamManager.IBLL\BAR.TeamManager.IBLL.csproj">
+      <Project>{06e9298c-d7ba-4739-a138-b86e16c7f273}</Project>
+      <Name>BAR.TeamManager.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BAR.TeamManager.Model\BAR.TeamManager.Model.csproj">
+      <Project>{a19cf8a5-0c04-479d-aeba-13691d8801f6}</Project>
+      <Name>BAR.TeamManager.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52725</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52058/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

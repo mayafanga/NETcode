@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <!--添加新的节点前，请使用ctrl+F检查该节点是否已经添加-->
+  <object type ="BAR.TeamManager.BLL.honorService,BAR.TeamManager.BLL" singleton="false" name="honorService"></object>
+  <object type ="BAR.TeamManager.BLL.honorparticipantmemberService,BAR.TeamManager.BLL" singleton="false" name="honorparticipantmemberService"></object>
+  <object type ="BAR.TeamManager.BLL.personalinformationService,BAR.TeamManager.BLL" singleton="false" name="personalinformationService"></object>
+  <object type ="BAR.TeamManager.BLL.teamService,BAR.TeamManager.BLL" singleton="false" name="teamService">
+     <property name="TeamapplicantService" ref="teamapplicantService" />
+     <property name="PlayersService" ref="playersService" />
+     <property name="PersonalinformationService" ref="personalinformationService" />
+     <property name="TeamapplicationService" ref="teamapplicationService" />
+  </object>
+  <object type ="BAR.TeamManager.BLL.userService,BAR.TeamManager.BLL" singleton="false" name="userService"></object>
+  <object type ="BAR.TeamManager.BLL.registerloginService,BAR.TeamManager.BLL" singleton="false" name="registerloginService"></object>
+  <object type ="BAR.TeamManager.BLL.webmasterService,BAR.TeamManager.BLL" singleton="false" name="webmasterService"></object>
+  <object type ="BAR.TeamManager.BLL.teamapplicantService,BAR.TeamManager.BLL" singleton="false" name="teamapplicantService"></object>
+  <!--新添加：李辉-->
+  <!--<object type ="BAR.TeamManager.BLL.teamService,BAR.TeamManager.BLL" singleton="false" name="teamService"></object>上面有-->
+  <!--<object type="BAR.TeamManager.BLL.webmasterService,BAR.TeamManager.BLL" singleton="false" name="webmasterService"></object>上面有-->
+  <!--<object type ="BAR.TeamManager.BLL.userService,BAR.TeamManager.BLL" singleton="false" name="userService"></object>上面有-->
+  <!--<object type ="BAR.TeamManager.BLL.honorService,BAR.TeamManager.BLL" singleton="false" name="honorService"></object>上面有-->
+  <object type ="BAR.TeamManager.BLL.activityService,BAR.TeamManager.BLL" singleton="false" name="activityService"></object>
+  <!--<object type ="BAR.TeamManager.BLL.registerloginService,BAR.TeamManager.BLL" singleton="false" name="registerloginService"></object>上面有-->
+
+  <object type ="BAR.TeamManager.BLL.playersService,BAR.TeamManager.BLL" singleton="false" name="playersService"></object>
+  <object type ="BAR.TeamManager.BLL.teamapplicationService,BAR.TeamManager.BLL" singleton="false" name="teamapplicationService"></object>
+   
+</objects>
